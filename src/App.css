@@ -1,0 +1,25 @@
+
+.header{
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+}
+.header ul{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+.header ul li{
+  margin: 20px;
+}
+
+.postForm form{
+  display: flex;
+  flex-direction: column;
+}
+.post img{
+  width: 20px;
+}
+.post button{
+  background-color: rgb(0, 0, 0);
+}
