@@ -31,20 +31,6 @@ function App() {
     }
     fetchPosts()
   },[])
-  // const [posts,setPosts]= useState([
-  //   {postID:uuidv4(),
-  //     created_at:new Date(),
-  //   title:"who is your favarite founding father",
-  //   description:'sdasdas asd asd wasd asd as das',
-  //   like:0
-  //   },    
-  //   {postID:uuidv4(),
-  //     created_at:new Date(),
-  //       title:"who is the best programmer",
-  //       description:'Zhixiang Yan is the best programmer!',
-  //       like:0
-  //       }])
-    
 
         const handleDelete = (deletePost) => {
           setPosts((prevPosts)=> prevPosts.filter((post) => post !== deletePost))
@@ -52,7 +38,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
-      <Header showCreate={showCreate}/>
+      <Header showCreate={showCreate} posts={posts}/>
           <Routes>
             <Route path='/' index={true} element={<Home posts={posts} setPosts={setPosts} setShowCreate={setShowCreate}/>}></Route>
               <Route path='/post/new'  element={<PostForm posts={posts} setPosts={setPosts} setShowCreate={setShowCreate}/>}/>
