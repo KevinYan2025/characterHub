@@ -15,8 +15,9 @@ const Post = ({post,handleDelete,handleLike}) => {
     return (
         <>
             <div className="post">
-                <p>Post on {`${post.date.getMonth()}/${post.date.getDate()}/${post.date.getFullYear()}`}</p>
-                <Link to={`/post/${post.id}`}>{post.title}</Link>
+            <p>{post.create_at}</p>
+                {/* <p>Post on {`${post.created_at.getMonth()}/${post.created_at.getDate()}/${post.created_at.getFullYear()}`}</p> */}
+                <Link to={`/post/${post.postID}`}>{post.title}</Link>
                 <div className="like">
                 <p>{post.like}</p>
                 <button><img src={loveImage} onClick={clickLike} /></button>

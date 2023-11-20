@@ -2,7 +2,9 @@ import Post from "./Post"
 import '../App.css'
 import { useEffect, useState } from "react"
 import doraemon from '../assets/doraemon2.gif'
-const Home = ({posts,setPosts}) => {
+const Home = ({posts,setPosts,setShowCreate}) => {
+    const showCreate = () => {setShowCreate(true)}
+    showCreate()
     const handleLike = (post) => {
         post.like += 1;
     };
